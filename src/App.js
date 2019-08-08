@@ -1,0 +1,23 @@
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import './App.css';
+import { ProductsList } from './views/Products'
+import { Product } from './views/Product';
+import { Store } from './store';
+
+function App() {
+  return (
+    <Provider store={Store}>
+    <div id="main-app">
+      <h1>Rust Store</h1>
+      <BrowserRouter>
+        <Route exact path="/" component={ProductsList}></Route>
+        <Route  path="/product/:id" component={Product}></Route>
+      </BrowserRouter>
+    </div>
+    </Provider>
+  );
+}
+
+export default App;
