@@ -10,11 +10,12 @@
 }
 
 .product-item {
-    width: 33%;
+    width: 60%;
 }
 
-.product-item img {
-    max-width: 100%;
-    height: auto;
+#alert {
+    margin: 35% auto;
+    width: 30%;
+
 }
 

@@ -5,21 +5,22 @@ import './Products.css'
 
 export class ProductsList extends Component {
     state = {
-        products : []
+        products: []
     }
 
-    async componentWillMount(){
-        const  { items } = await Products.getProducts()
-        this.setState({ products: items}) 
+    async componentWillMount() {
+        const { items } = await Products.getProducts()
+        this.setState({ products: items })
     }
 
-    render(){
-        return(
-            <ul className="product-list">
+    render() {
+        return (
+            <div class="row">
                 {this.state.products.map(p => (
-                    <ProductItem product={p}/>
+                    <ProductItem product={p} />
                 ))}
-            </ul>
+            </div>
+
         )
     }
 }
